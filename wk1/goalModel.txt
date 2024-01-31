@@ -1,0 +1,233 @@
+{
+  "actors": [
+    {
+      "id": "76b68507-1798-4888-afe2-ec5d2c88cbfb",
+      "text": "New reporting system",
+      "type": "istar.Agent",
+      "x": 599,
+      "y": 102,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "07fb71ba-2b8c-4990-91be-05ee79976800",
+          "text": "produce reports",
+          "type": "istar.Task",
+          "x": 624,
+          "y": 181,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "bda083fe-1fb4-41cf-aea9-449c0d4044b5",
+      "text": "top management",
+      "type": "istar.Role",
+      "x": 82,
+      "y": 109,
+      "customProperties": {
+        "Description": "Someone that needs to undestand the goals of an organizations"
+      },
+      "nodes": [
+        {
+          "id": "364621c5-fec3-4898-ab56-2b6b1432f768",
+          "text": "improving governance",
+          "type": "istar.Goal",
+          "x": 181,
+          "y": 138,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "d5651864-61c4-4ffd-b411-21776cb0531e",
+          "text": "query ERP system",
+          "type": "istar.Task",
+          "x": 124,
+          "y": 223,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "8ba039b5-3f04-41c5-88ce-6f0ba06741ad",
+          "text": "timely sales report",
+          "type": "istar.Goal",
+          "x": 282,
+          "y": 188,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "5c6def07-6de4-46b8-b96e-b25f72cac17c",
+          "text": "get detailed sales",
+          "type": "istar.Task",
+          "x": 96,
+          "y": 287,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "3e061788-4f35-42e0-9557-e390f433674f",
+          "text": "get HR information",
+          "type": "istar.Task",
+          "x": 222,
+          "y": 297,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "8eda6049-4c49-4758-b65f-4a8c299a758f",
+      "text": "Existing ERP system",
+      "type": "istar.Agent",
+      "x": 39,
+      "y": 491,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "50b5f047-da4a-40b0-94c9-cc79b82cd94f",
+          "text": "provide sales reports",
+          "type": "istar.Task",
+          "x": 258,
+          "y": 543,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "fa56c799-43d6-44aa-886c-8f4d9e4f57c1",
+          "text": "provide hr info",
+          "type": "istar.Task",
+          "x": 88,
+          "y": 545,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "fc420abe-eebd-4b81-904e-55a12858cc41",
+      "text": "sales report",
+      "type": "istar.Resource",
+      "x": 434,
+      "y": 143,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "8ba039b5-3f04-41c5-88ce-6f0ba06741ad",
+      "target": "07fb71ba-2b8c-4990-91be-05ee79976800"
+    },
+    {
+      "id": "308e484a-263c-4cf2-b883-d56c20773fbd",
+      "text": "sales report",
+      "type": "istar.Resource",
+      "x": 246,
+      "y": 410,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "3e061788-4f35-42e0-9557-e390f433674f",
+      "target": "50b5f047-da4a-40b0-94c9-cc79b82cd94f"
+    },
+    {
+      "id": "8184f3b1-e8c0-4a53-8512-0490eba63d80",
+      "text": "hr info",
+      "type": "istar.Resource",
+      "x": 78,
+      "y": 415,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "5c6def07-6de4-46b8-b96e-b25f72cac17c",
+      "target": "fa56c799-43d6-44aa-886c-8f4d9e4f57c1"
+    }
+  ],
+  "links": [
+    {
+      "id": "c23d0508-296d-4bd9-a006-447022e8c570",
+      "type": "istar.DependencyLink",
+      "source": "8184f3b1-e8c0-4a53-8512-0490eba63d80",
+      "target": "fa56c799-43d6-44aa-886c-8f4d9e4f57c1"
+    },
+    {
+      "id": "6ad00068-3549-4412-ad80-d149cf4c0776",
+      "type": "istar.DependencyLink",
+      "source": "5c6def07-6de4-46b8-b96e-b25f72cac17c",
+      "target": "8184f3b1-e8c0-4a53-8512-0490eba63d80"
+    },
+    {
+      "id": "45015779-89ee-45b9-977c-c42193ada6fa",
+      "type": "istar.DependencyLink",
+      "source": "308e484a-263c-4cf2-b883-d56c20773fbd",
+      "target": "50b5f047-da4a-40b0-94c9-cc79b82cd94f"
+    },
+    {
+      "id": "6a2f9518-de59-4ba9-87ca-28a24acc92ba",
+      "type": "istar.DependencyLink",
+      "source": "3e061788-4f35-42e0-9557-e390f433674f",
+      "target": "308e484a-263c-4cf2-b883-d56c20773fbd"
+    },
+    {
+      "id": "5aecc411-ac72-47a8-b316-510a837f485a",
+      "type": "istar.DependencyLink",
+      "source": "fc420abe-eebd-4b81-904e-55a12858cc41",
+      "target": "07fb71ba-2b8c-4990-91be-05ee79976800"
+    },
+    {
+      "id": "f2aeaa43-7b01-4c6b-a60c-7876419a7ad0",
+      "type": "istar.DependencyLink",
+      "source": "8ba039b5-3f04-41c5-88ce-6f0ba06741ad",
+      "target": "fc420abe-eebd-4b81-904e-55a12858cc41"
+    },
+    {
+      "id": "7a3e20fb-f209-4c52-b67c-e9694e011a75",
+      "type": "istar.AndRefinementLink",
+      "source": "d5651864-61c4-4ffd-b411-21776cb0531e",
+      "target": "364621c5-fec3-4898-ab56-2b6b1432f768"
+    },
+    {
+      "id": "90585825-7858-4fd0-b65a-3305e95c5dfe",
+      "type": "istar.AndRefinementLink",
+      "source": "8ba039b5-3f04-41c5-88ce-6f0ba06741ad",
+      "target": "364621c5-fec3-4898-ab56-2b6b1432f768"
+    },
+    {
+      "id": "94f5213d-2ebc-414b-a509-2c97da5393f0",
+      "type": "istar.AndRefinementLink",
+      "source": "3e061788-4f35-42e0-9557-e390f433674f",
+      "target": "d5651864-61c4-4ffd-b411-21776cb0531e"
+    },
+    {
+      "id": "633937dd-9719-41eb-9288-6e7898fe85b6",
+      "type": "istar.AndRefinementLink",
+      "source": "5c6def07-6de4-46b8-b96e-b25f72cac17c",
+      "target": "d5651864-61c4-4ffd-b411-21776cb0531e"
+    }
+  ],
+  "display": {},
+  "tool": "pistar.2.1.0",
+  "istar": "2.0",
+  "saveDate": "Wed, 31 Jan 2024 15:26:16 GMT",
+  "diagram": {
+    "width": 1000,
+    "height": 700,
+    "name": "Welcome Model",
+    "customProperties": {
+      "Description": "Welcome to the piStar tool version 2.1.0, released on November, 2021! This model describes some of the recent improvements in the tool. Click on the purple elements for further info.\n\nFor help using this tool, please check the Help menu above"
+    }
+  }
+}
