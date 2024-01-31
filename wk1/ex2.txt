@@ -1,0 +1,222 @@
+{
+  "actors": [
+    {
+      "id": "bda083fe-1fb4-41cf-aea9-449c0d4044b5",
+      "text": "IC",
+      "type": "istar.Role",
+      "x": 145,
+      "y": 104,
+      "customProperties": {
+        "Description": "Someone that needs to undestand the goals of an organizations"
+      },
+      "nodes": [
+        {
+          "id": "364621c5-fec3-4898-ab56-2b6b1432f768",
+          "text": "a new insurance service for small assets",
+          "type": "istar.Goal",
+          "x": 244,
+          "y": 133,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "569ea2e4-69df-47e1-bd67-073d1fcb2148",
+          "text": "Check customers credentials and history",
+          "type": "istar.Task",
+          "x": 171,
+          "y": 322,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "aeedea78-790a-477e-b810-a1fd3fdab2a9",
+          "text": "inexpensive asset",
+          "type": "istar.Goal",
+          "x": 344,
+          "y": 237,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "befef300-b388-4040-9ef8-c75ca6567400",
+          "text": "ensure customer reliabilty",
+          "type": "istar.Goal",
+          "x": 162,
+          "y": 225,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "4f09ddad-d95b-488b-8140-ba3e07d1fa3a",
+          "text": "estimate the asset's price",
+          "type": "istar.Task",
+          "x": 344,
+          "y": 333,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "3fab3304-9a8c-4738-af81-d89cae45ed06",
+      "text": "Customer",
+      "type": "istar.Actor",
+      "x": 183,
+      "y": 504,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "05a95adc-0606-42a9-9464-799dd7b45f4e",
+          "text": "insured assets",
+          "type": "istar.Goal",
+          "x": 260,
+          "y": 565,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "effb260d-5f0c-4d44-b7a7-7b8e82631de3",
+          "text": "provide credentials",
+          "type": "istar.Task",
+          "x": 201,
+          "y": 647,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "00e4c8bb-c64b-4172-b15f-5f11043ed537",
+          "text": "provide asset photo and details",
+          "type": "istar.Task",
+          "x": 312,
+          "y": 648,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "3d7b793f-21e2-48f7-af60-2d213d997f63",
+      "text": "asset info",
+      "type": "istar.Resource",
+      "x": 491,
+      "y": 475,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "4f09ddad-d95b-488b-8140-ba3e07d1fa3a",
+      "target": "00e4c8bb-c64b-4172-b15f-5f11043ed537"
+    },
+    {
+      "id": "cc8a0848-b755-4cf2-b804-a181e50d18a4",
+      "text": "credentials",
+      "type": "istar.Resource",
+      "x": 40,
+      "y": 489,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "569ea2e4-69df-47e1-bd67-073d1fcb2148",
+      "target": "effb260d-5f0c-4d44-b7a7-7b8e82631de3"
+    }
+  ],
+  "links": [
+    {
+      "id": "943e99bd-1a27-432d-80f7-c30dce38499e",
+      "type": "istar.DependencyLink",
+      "source": "cc8a0848-b755-4cf2-b804-a181e50d18a4",
+      "target": "effb260d-5f0c-4d44-b7a7-7b8e82631de3"
+    },
+    {
+      "id": "e2f1f739-0419-49d0-bfbb-ef02081c312c",
+      "type": "istar.DependencyLink",
+      "source": "569ea2e4-69df-47e1-bd67-073d1fcb2148",
+      "target": "cc8a0848-b755-4cf2-b804-a181e50d18a4"
+    },
+    {
+      "id": "92c1f6e3-5e38-447e-8682-a7409f764a49",
+      "type": "istar.DependencyLink",
+      "source": "3d7b793f-21e2-48f7-af60-2d213d997f63",
+      "target": "00e4c8bb-c64b-4172-b15f-5f11043ed537"
+    },
+    {
+      "id": "2f24eb3a-9268-4a34-9dca-e9b10149f372",
+      "type": "istar.DependencyLink",
+      "source": "4f09ddad-d95b-488b-8140-ba3e07d1fa3a",
+      "target": "3d7b793f-21e2-48f7-af60-2d213d997f63"
+    },
+    {
+      "id": "c49a29ce-cbd5-497b-82bd-7b048c8340ea",
+      "type": "istar.AndRefinementLink",
+      "source": "364621c5-fec3-4898-ab56-2b6b1432f768",
+      "target": "befef300-b388-4040-9ef8-c75ca6567400"
+    },
+    {
+      "id": "ee706aba-1651-445f-b0d4-0bb9ee255a12",
+      "type": "istar.AndRefinementLink",
+      "source": "364621c5-fec3-4898-ab56-2b6b1432f768",
+      "target": "aeedea78-790a-477e-b810-a1fd3fdab2a9"
+    },
+    {
+      "id": "85b94ee2-7ea2-45fa-9361-9ea5d81b1072",
+      "type": "istar.AndRefinementLink",
+      "source": "05a95adc-0606-42a9-9464-799dd7b45f4e",
+      "target": "effb260d-5f0c-4d44-b7a7-7b8e82631de3"
+    },
+    {
+      "id": "f62c25e9-6352-4958-b325-73060ebe7f9a",
+      "type": "istar.AndRefinementLink",
+      "source": "05a95adc-0606-42a9-9464-799dd7b45f4e",
+      "target": "00e4c8bb-c64b-4172-b15f-5f11043ed537"
+    },
+    {
+      "id": "a51e936b-8fa5-41fe-8a2b-1538e8c5fbb8",
+      "type": "istar.AndRefinementLink",
+      "source": "569ea2e4-69df-47e1-bd67-073d1fcb2148",
+      "target": "befef300-b388-4040-9ef8-c75ca6567400"
+    },
+    {
+      "id": "c9756334-bdc7-455e-b81d-0c39b5459aff",
+      "type": "istar.AndRefinementLink",
+      "source": "4f09ddad-d95b-488b-8140-ba3e07d1fa3a",
+      "target": "aeedea78-790a-477e-b810-a1fd3fdab2a9"
+    }
+  ],
+  "display": {
+    "364621c5-fec3-4898-ab56-2b6b1432f768": {
+      "width": 123.40625,
+      "height": 67.53125
+    },
+    "569ea2e4-69df-47e1-bd67-073d1fcb2148": {
+      "width": 106.40625,
+      "height": 70.53125
+    },
+    "befef300-b388-4040-9ef8-c75ca6567400": {
+      "width": 112.40625,
+      "height": 59.03125
+    }
+  },
+  "tool": "pistar.2.1.0",
+  "istar": "2.0",
+  "saveDate": "Wed, 31 Jan 2024 23:15:14 GMT",
+  "diagram": {
+    "width": 1054,
+    "height": 700,
+    "name": "Welcome Model",
+    "customProperties": {
+      "Description": "Welcome to the piStar tool version 2.1.0, released on November, 2021! This model describes some of the recent improvements in the tool. Click on the purple elements for further info.\n\nFor help using this tool, please check the Help menu above"
+    }
+  }
+}
