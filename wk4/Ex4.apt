@@ -1,0 +1,30 @@
+.name "Ex4"
+.type PN
+
+.places
+p0
+p4
+p5
+p8
+p9
+p11
+
+.transitions
+TaskB
+TaskC
+TaskA
+split
+Merge
+t10
+Merge2
+
+.flows
+TaskB: {1*p8} -> {1*p4}
+TaskC: {1*p9} -> {1*p0}
+TaskA: {1*p0} -> {1*p5}
+split: {1*p5} -> {1*p8}
+Merge: {1*p4} -> {1*p9}
+t10: {1*p5} -> {1*p11}
+Merge2: {1*p11} -> {1*p9}
+
+.initial_marking {}

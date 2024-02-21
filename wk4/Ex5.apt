@@ -1,0 +1,33 @@
+.name "Ex5"
+.type PN
+
+.places
+p6
+p7
+p8
+p9
+p10
+p11
+p12
+
+.transitions
+B
+C
+A
+D
+Merge
+Split
+Merge2
+Split2
+
+.flows
+B: {1*p8} -> {1*p11}
+C: {1*p11} -> {1*p9}
+A: {1*p6} -> {1*p7}
+D: {1*p10} -> {1*p6}
+Merge: {1*p9} -> {1*p10}
+Split: {1*p7} -> {1*p8}
+Merge2: {1*p12} -> {1*p10}
+Split2: {1*p7} -> {1*p12}
+
+.initial_marking {}

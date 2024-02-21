@@ -1,0 +1,32 @@
+.name "Ex3"
+.type PN
+
+.places
+p2
+P1
+p3
+p4
+p5
+p11
+p12
+p14
+
+.transitions
+Market_opportunity
+Request_sales_report
+B_Market_decision
+query_ERP_system
+split
+Generate_sales_reports
+slit2
+
+.flows
+Market_opportunity: {1*P1} -> {1*p2}
+Request_sales_report: {1*p2} -> {1*p11}
+B_Market_decision: {1*p4, 1*p14} -> {1*p5}
+query_ERP_system: {1*p3} -> {1*p4}
+split: {1*p12} -> {1*p3}
+Generate_sales_reports: {1*p11} -> {1*p12}
+slit2: {1*p12} -> {1*p14}
+
+.initial_marking {5*p2, 3*P1}
